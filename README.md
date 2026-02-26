@@ -33,7 +33,7 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 
 #### Program
 
-```asm
+```
 CODE SEGMENT
 ASSUME CS:CODE, DS:CODE
 ORG 1000H
@@ -50,23 +50,22 @@ MOV AH,4CH
 INT 21H
 CODE ENDS
 END
+
 ```
 
 #### Output Table
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|       1200🔢       01         12
+<img width="991" height="405" alt="image" src="https://github.com/user-attachments/assets/4a335a2e-09b8-402f-89d8-8c17efd0b445" />
 
-|         1200                    |
 
 #### Manual Calculations
-
-(Add your calculation here)
+<img width="923" height="311" alt="image" src="https://github.com/user-attachments/assets/911e29bc-d9aa-45aa-b952-f493b72eaa59" />
 
 ---
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
+<img width="826" height="550" alt="image" src="https://github.com/user-attachments/assets/fa0ae106-aede-4cad-934f-d51b31823fca" />
+
 
 ## 2. SUBTRACTION
 
@@ -84,41 +83,39 @@ END
 
 
 #### Program
-```asm
-CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
-ORG 1000H
-MOV SI,2000H
-MOV CL,00H
-MOV AX,[SI]
-MOV BX,[SI+02H]
-SUB AX,BX
-JNC L1
-INC CL
-L1:
-MOV [SI+04H],AX
-MOV [SI+06H],CL
-MOV AH,4CH
-INT 21H
-CODE ENDS
-END
+```code segment
+assume cs:code,ds:code
+org 1000h
+mov AX,1234h
+mov BX,1234h
+sub AX,BX
+jnc down
+inc CL
+down:mov SI,1200h
+mov [sI],AX
+mov [SI+2],CL
+mov ah,4ch
+int 21H
+code ends
+end
+
 ```
 
 
 #### Output Table
+<img width="1010" height="413" alt="image" src="https://github.com/user-attachments/assets/9e771cd7-ae64-42ca-8809-84f6e9d9632f" />
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
+
 
 #### Manual Calculations
 
-(Add your calculation here)
+<img width="606" height="374" alt="image" src="https://github.com/user-attachments/assets/80d93ea7-4f5a-44d7-ab05-24d8710ecce1" />
 
 ---
 
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="818" height="545" alt="image" src="https://github.com/user-attachments/assets/0a37e052-9c91-480f-afaf-cf3359469c9e" />
 
 ## 3. MULTIPLICATION
 
@@ -137,36 +134,39 @@ END
 
 #### Program
 
-```asm
-CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
-ORG 1000H
-MOV SI,2000H
+```
+code segment
+assume cs:code,ds:code
+org 1000h
 MOV DX,0000H
-MOV AX,[SI]
-MOV BX,[SI+02H]
-MUL BX
-MOV [SI+04H],AX
-MOV [SI+06H],DX
-MOV AH,4CH
-INT 21H
-CODE ENDS
-END
+mov AX,1234h
+mov BX,1234h
+mul BX
+mov si,1200h
+mov [si],ax
+mov [si+02h],dx
+mov ah,4ch
+int 21h
+code ends
+end
+
 ```
 
 #### Output Table
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
+<img width="940" height="632" alt="image" src="https://github.com/user-attachments/assets/e9ffc18e-dc7c-49dc-8125-5b3e0dec1351" />
+
 
 #### Manual Calculations
 
-(Add your calculation here)
+<img width="683" height="568" alt="image" src="https://github.com/user-attachments/assets/91ee4c25-0d19-40de-8b68-02e85a0215d3" />
+
 
 ---
 
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+<img width="992" height="478" alt="image" src="https://github.com/user-attachments/assets/86dcdd98-c116-4157-9e95-d45263175393" />
+
 
 ## 4. DIVISION
 
@@ -182,36 +182,37 @@ END
 
 #### Program
 
-```asm
+```
 CODE SEGMENT
-ASSUME CS: CODE, DS: CODE
+ASSUME CS:CODE,DS:CODE
 ORG 1000H
-MOV SI,2000H
 MOV DX,0000H
-MOV AX,[SI]
-MOV BX,[SI+02H]
+MOV AX,1234H
+MOV BX,1234H
 DIV BX
-MOV [SI+04H],AX
-MOV [SI+06H],DX
+MOV SI,1200H
+MOV [SI],AX
+MOV [SI+02H],DX
 MOV AH,4CH
 INT 21H
 CODE ENDS
 END
+
 ```
 
 #### Output Table
 
-| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
+<img width="940" height="609" alt="image" src="https://github.com/user-attachments/assets/565b717d-add8-4ce0-aba4-7621bc27ae32" />
+
 
 #### Manual Calculations
 
-(Add your calculation here)
+<img width="520" height="421" alt="image" src="https://github.com/user-attachments/assets/bd03a483-3b28-4a8e-a8d1-6c05ed2dfb1f" />
 
 ---
 ## OUTPUT FROM MASM SOFTWARE
 
+<img width="940" height="629" alt="image" src="https://github.com/user-attachments/assets/d6d93ed3-8849-4f60-8897-ccd14fcd079a" />
 
 
 ## RESULT
